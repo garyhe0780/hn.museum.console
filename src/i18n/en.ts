@@ -41,16 +41,16 @@ const customEnglishMessages: TranslationMessages = {
     },
     resources: {
         customers: {
-            name: 'Customer |||| Customers',
+            name: '志愿者',
             fields: {
-                commands: 'Orders',
-                first_seen: 'First seen',
+                commands: '讲解记录',
+                first_seen: '第一次讲解',
                 groups: 'Segments',
-                last_seen: 'Last seen',
+                last_seen: '上次讲解',
                 last_seen_gte: 'Visited Since',
-                name: 'Name',
-                total_spent: 'Total spent',
-                password: 'Password',
+                name: '姓名',
+                total_spent: '讲解时间',
+                password: '密码',
                 confirm_password: 'Confirm password',
                 stateAbbr: 'State',
             },
@@ -75,7 +75,7 @@ const customEnglishMessages: TranslationMessages = {
                 change_password: '修改密码',
             },
             page: {
-                delete: 'Delete Customer',
+                delete: '删除志愿者',
             },
             errors: {
                 password_mismatch:
