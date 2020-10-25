@@ -67,12 +67,12 @@ const customEnglishMessages: TranslationMessages = {
                 group: 'Segment',
             },
             fieldGroups: {
-                identity: 'Identity',
-                address: 'Address',
-                stats: 'Stats',
-                history: 'History',
-                password: 'Password',
-                change_password: 'Change Password',
+                identity: '身份信息',
+                address: '地址',
+                stats: '职业信息',
+                history: '登录记录',
+                password: '密码',
+                change_password: '修改密码',
             },
             page: {
                 delete: 'Delete Customer',

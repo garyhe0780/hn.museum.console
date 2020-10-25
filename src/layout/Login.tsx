@@ -130,7 +130,7 @@ const Login = () => {
                                 </Avatar>
                             </div>
                             <div className={classes.hint}>
-                                Hint: museum / museum
+                                提示: museum / museum
                             </div>
                             <div className={classes.form}>
                                 <div className={classes.input}>
@@ -139,7 +139,7 @@ const Login = () => {
                                         name="username"
                                         // @ts-ignore
                                         component={renderInput}
-                                        label={translate('ra.auth.username')}
+                                        label="管理员"
                                         disabled={loading}
                                     />
                                 </div>
@@ -148,7 +148,7 @@ const Login = () => {
                                         name="password"
                                         // @ts-ignore
                                         component={renderInput}
-                                        label={translate('ra.auth.password')}
+                                        label="管理员密码"
                                         type="password"
                                         disabled={loading}
                                     />
@@ -168,7 +168,7 @@ const Login = () => {
                                             thickness={2}
                                         />
                                     )}
-                                    {translate('ra.auth.sign_in')}
+                                    登入
                                 </Button>
                             </CardActions>
                         </Card>
