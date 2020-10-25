@@ -10,13 +10,14 @@ interface Props {
 }
 
 const MonthlyRevenue: FC<Props> = ({ value }) => {
-    const translate = useTranslate();
+    // const translate = useTranslate();
+    console.log(value);
     return (
         <CardWithIcon
             to="/commands"
             icon={DollarIcon}
-            title={translate('pos.dashboard.monthly_revenue')}
-            subtitle={value}
+            title={'本月讲解次数'}
+            subtitle={value?.slice(1)}
         />
     );
 };

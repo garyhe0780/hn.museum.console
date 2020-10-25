@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { FC } from 'react';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -33,7 +33,7 @@ const PendingOrders: FC<Props> = ({ orders = [], customers = {} }) => {
     const translate = useTranslate();
     return (
         <Card className={classes.root}>
-            <CardHeader title={translate('pos.dashboard.pending_orders')} />
+            <CardHeader title='讲解列表' />
             <List dense={true}>
                 {orders.map(record => (
                     <ListItem

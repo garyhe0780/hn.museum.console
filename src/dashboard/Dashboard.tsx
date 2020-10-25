@@ -174,8 +174,6 @@ const Dashboard: FC = () => {
                 <Welcome />
                 <MonthlyRevenue value={revenue} />
                 <VerticalSpacer />
-                <NbNewOrders value={nbNewOrders} />
-                <VerticalSpacer />
                 <PendingOrders
                     orders={pendingOrders}
                     customers={pendingOrdersCustomers}
@@ -189,8 +187,6 @@ const Dashboard: FC = () => {
             </div>
             <div style={styles.flex}>
                 <MonthlyRevenue value={revenue} />
-                <Spacer />
-                <NbNewOrders value={nbNewOrders} />
             </div>
             <div style={styles.singleCol}>
                 <OrderChart orders={recentOrders} />
@@ -209,8 +205,6 @@ const Dashboard: FC = () => {
                 <div style={styles.leftCol}>
                     <div style={styles.flex}>
                         <MonthlyRevenue value={revenue} />
-                        <Spacer />
-                        <NbNewOrders value={nbNewOrders} />
                     </div>
                     <div style={styles.singleCol}>
                         <OrderChart orders={recentOrders} />

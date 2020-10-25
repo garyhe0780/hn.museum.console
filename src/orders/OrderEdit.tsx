@@ -53,14 +53,6 @@ const CustomerDetails = ({ record }: { record?: Customer }) => (
         >
             {record?.first_name} {record?.last_name}
         </Typography>
-        <Typography
-            component={Link}
-            color="primary"
-            href={`mailto:${record?.email}`}
-            style={{ textDecoration: 'none' }}
-        >
-            {record?.email}
-        </Typography>
     </Box>
 );
 
@@ -94,9 +86,7 @@ const OrderForm = (props: any) => {
                             <Grid container spacing={1}>
                                 <Grid item xs={12} sm={12} md={8}>
                                     <Typography variant="h6" gutterBottom>
-                                        {translate(
-                                            'resources.commands.section.order'
-                                        )}
+                                        讲解详情
                                     </Typography>
                                     <Grid container>
                                         <Grid item xs={12} sm={12} md={6}>
@@ -111,18 +101,6 @@ const OrderForm = (props: any) => {
                                                 />
                                             </Labeled>
                                         </Grid>
-                                        <Grid item xs={12} sm={12} md={6}>
-                                            <Labeled
-                                                source="reference"
-                                                resource="commands"
-                                            >
-                                                <TextField
-                                                    source="reference"
-                                                    resource="commands"
-                                                    record={formProps.record}
-                                                />
-                                            </Labeled>
-                                        </Grid>
                                     </Grid>
                                     <Grid container>
                                         <Grid item xs={12} sm={12} md={6}>
@@ -132,20 +110,11 @@ const OrderForm = (props: any) => {
                                                 choices={[
                                                     {
                                                         id: 'delivered',
-                                                        name: 'delivered',
-                                                    },
-                                                    {
-                                                        id: 'ordered',
-                                                        name: 'ordered',
+                                                        name: '讲解完成',
                                                     },
                                                     {
                                                         id: 'cancelled',
-                                                        name: 'cancelled',
-                                                    },
-                                                    {
-                                                        id: 'unknown',
-                                                        name: 'unknown',
-                                                        disabled: true,
+                                                        name: '讲解未完成',
                                                     },
                                                 ]}
                                             />
@@ -155,7 +124,7 @@ const OrderForm = (props: any) => {
                                                 <BooleanInput
                                                     row={true}
                                                     resource="commands"
-                                                    source="returned"
+                                                    source="是否签到"
                                                 />
                                             </Box>
                                         </Grid>
@@ -163,9 +132,7 @@ const OrderForm = (props: any) => {
                                 </Grid>
                                 <Grid item xs={12} sm={12} md={4}>
                                     <Typography variant="h6" gutterBottom>
-                                        {translate(
-                                            'resources.commands.section.customer'
-                                        )}
+                                    志愿者
                                     </Typography>
                                     <ReferenceField
                                         source="customer_id"
@@ -177,51 +144,9 @@ const OrderForm = (props: any) => {
                                     >
                                         <CustomerDetails />
                                     </ReferenceField>
-                                    <Spacer />
-
-                                    <Typography variant="h6" gutterBottom>
-                                        {translate(
-                                            'resources.commands.section.shipping_address'
-                                        )}
-                                    </Typography>
-                                    <ReferenceField
-                                        source="customer_id"
-                                        resource="commands"
-                                        reference="customers"
-                                        basePath="/customers"
-                                        record={formProps.record}
-                                        link={false}
-                                    >
-                                        <CustomerAddress />
-                                    </ReferenceField>
                                 </Grid>
                             </Grid>
-                            <Spacer />
-
-                            <Typography variant="h6" gutterBottom>
-                                {translate('resources.commands.section.items')}
-                            </Typography>
-                            <Box>
-                                <Basket record={formProps.record} />
-                            </Box>
-                            <Spacer />
-
-                            <Typography variant="h6" gutterBottom>
-                                {translate('resources.commands.section.total')}
-                            </Typography>
-                            <Box>
-                                <Totals record={formProps.record} />
-                            </Box>
                         </CardContent>
-                        <Toolbar
-                            record={formProps.record}
-                            basePath={formProps.basePath}
-                            undoable={true}
-                            invalid={formProps.invalid}
-                            handleSubmit={formProps.handleSubmit}
-                            saving={formProps.saving}
-                            resource="commands"
-                        />
                     </Card>
                 </Box>
             )}

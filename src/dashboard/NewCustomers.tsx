@@ -51,7 +51,7 @@ const NewCustomers = () => {
         <CardWithIcon
             to="/customers"
             icon={CustomerIcon}
-            title={translate('pos.dashboard.new_customers')}
+            title={'新增的志愿者'}
             subtitle={nb}
         >
             <List>
@@ -82,7 +82,7 @@ const NewCustomers = () => {
                 color="primary"
             >
                 <Box p={1} className={classes.linkContent}>
-                    {translate('pos.dashboard.all_customers')}
+                    {'查看所有志愿者'}
                 </Box>
             </Button>
         </CardWithIcon>

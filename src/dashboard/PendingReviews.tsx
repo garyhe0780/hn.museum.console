@@ -26,12 +26,12 @@ interface Props {
 
 const PendingReviews: FC<Props> = ({ reviews = [], customers = {}, nb }) => {
     const classes = useStyles();
-    const translate = useTranslate();
+    // const translate = useTranslate();
     return (
         <CardWithIcon
             to="/reviews"
             icon={CommentIcon}
-            title={translate('pos.dashboard.pending_reviews')}
+            title={'评价数'}
             subtitle={nb}
         >
             <List>
@@ -74,7 +74,7 @@ const PendingReviews: FC<Props> = ({ reviews = [], customers = {}, nb }) => {
                 color="primary"
             >
                 <Box p={1} className={classes.linkContent}>
-                    {translate('pos.dashboard.all_reviews')}
+                    {'查看所有的评价'}
                 </Box>
             </Button>
         </CardWithIcon>

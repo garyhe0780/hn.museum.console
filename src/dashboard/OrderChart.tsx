@@ -52,7 +52,7 @@ const OrderChart: FC<{ orders?: Order[] }> = ({ orders }) => {
 
     return (
         <Card>
-            <CardHeader title={translate('pos.dashboard.month_history')} />
+            <CardHeader title='本月讲解次数' />
             <CardContent>
                 <div style={{ width: '100%', height: 300 }}>
                     <ResponsiveContainer>

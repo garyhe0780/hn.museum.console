@@ -45,29 +45,18 @@ const Welcome: FC = () => {
             <Box display="flex">
                 <Box flex="1">
                     <Typography variant="h5" component="h2" gutterBottom>
-                        {translate('pos.dashboard.welcome.title')}
+                    欢迎回来!
                     </Typography>
                     <Box maxWidth="40em">
                         <Typography variant="body1" component="p" gutterBottom>
-                            {translate('pos.dashboard.welcome.subtitle')}
+                            这是湖南省博物馆志愿者管理后台系统
                         </Typography>
                     </Box>
-                    <CardActions className={classes.actions}>
-                        <Button
-                            variant="contained"
-                            href="https://marmelab.com/react-admin"
-                            startIcon={<HomeIcon />}
-                        >
-                            {translate('pos.dashboard.welcome.ra_button')}
-                        </Button>
-                        <Button
-                            variant="contained"
-                            href="https://github.com/marmelab/react-admin/tree/master/examples/demo"
-                            startIcon={<CodeIcon />}
-                        >
-                            {translate('pos.dashboard.welcome.demo_button')}
-                        </Button>
-                    </CardActions>
+                    <Box maxWidth="40em">
+                        <Typography variant="body1" component="p" gutterBottom>
+                            管理员可以在此新增,修改志愿者信息, 并安排值班计划
+                        </Typography>
+                    </Box>
                 </Box>
 
                 <Box

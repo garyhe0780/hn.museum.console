@@ -4,11 +4,11 @@ import englishMessages from 'ra-language-english';
 const customEnglishMessages: TranslationMessages = {
     ...englishMessages,
     pos: {
-        search: 'Search',
-        configuration: 'Configuration',
-        language: 'Language',
+        search: '搜索',
+        configuration: '设置',
+        language: '语言',
         theme: {
-            name: 'Theme',
+            name: '主题',
             light: 'Light',
             dark: 'Dark',
         },
@@ -34,9 +34,9 @@ const customEnglishMessages: TranslationMessages = {
             },
         },
         menu: {
-            sales: 'Sales',
-            catalog: 'Catalog',
-            customers: 'Customers',
+            sales: '讲解列表',
+            catalog: '照片墙',
+            customers: '志愿者',
         },
     },
     resources: {
